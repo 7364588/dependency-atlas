@@ -15,6 +15,6 @@
     "demo": "tsc -p tsconfig.json && node scripts/demo.mjs",
     "prepack": "tsc -p tsconfig.json"
   },
-  "dependencies": { "typescript": "5.9.3" },
+  "dependencies": { "typescript": "7.0.2" },
   "devDependencies": { "@types/node": "22.18.6" }
 }
