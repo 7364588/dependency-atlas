@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.demo-work/
+.test-work/
+*.tgz
+*.tmp
+dependency-atlas.html
+dependency-atlas.json

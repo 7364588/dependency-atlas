@@ -1,0 +1,804 @@
+{
+  "schemaVersion": 1,
+  "base": {
+    "sha": "9424e2a55721b68d0b9d406d9ecd75771eb51d46",
+    "modules": [
+      {
+        "path": "src/app.ts",
+        "hash": "11d454bb56ae77191e243a2d44bc3527493f00dad4b49458815727cc3417cd40",
+        "bytes": 155
+      },
+      {
+        "path": "src/controllers/checkout.ts",
+        "hash": "4142eb7465024329583fc5b5630539134d2dfded5bcbaab806ada38c6344de5d",
+        "bytes": 195
+      },
+      {
+        "path": "src/infra/logger.ts",
+        "hash": "5931b029cfa41faead4d25525ac4f6b71d924d0a3aed4907924f96cd91294a4d",
+        "bytes": 63
+      },
+      {
+        "path": "src/models/order.ts",
+        "hash": "9c8805fe2e9c2a09b21e7c419d919d9f15b19190afe72985d7536ee395ed5ba2",
+        "bytes": 58
+      },
+      {
+        "path": "src/plugins.ts",
+        "hash": "435d4d5566077aa8465a39fd3394410a6075e65c725d456cb9511c0b625f525b",
+        "bytes": 58
+      },
+      {
+        "path": "src/routes/api.ts",
+        "hash": "a55001c454fab689df15b84d87ea473c7d65a7a1f91efa8b9d3482594cac2142",
+        "bytes": 98
+      },
+      {
+        "path": "src/services/cart.ts",
+        "hash": "1f8fb06df3424ed62ea5cf3b7a383ae85c38e57025619096640657d3078abfff",
+        "bytes": 162
+      },
+      {
+        "path": "src/services/inventory.ts",
+        "hash": "707dc3b4022a33ab72642a01db37aeba4bf1251c4330ef6b0d1f5ef2ed382e4f",
+        "bytes": 49
+      },
+      {
+        "path": "src/services/payments.ts",
+        "hash": "c48134b1ed117802f9ba0db6bf28212e576393ad09fa37eb54dcf484f7ad7b91",
+        "bytes": 156
+      },
+      {
+        "path": "src/services/pricing.ts",
+        "hash": "c254aa55e50bbc9ed65c5cc30a3b725356d6455d79c860dff04f32ff09b5999d",
+        "bytes": 52
+      },
+      {
+        "path": "src/ui/Checkout.tsx",
+        "hash": "1888699eadf2d1c27b03ba7b56260d609f790486f74f383693b97582eda85310",
+        "bytes": 153
+      }
+    ],
+    "edges": [
+      {
+        "id": "7abb84e846f62c7bd79ae37b",
+        "from": "src/app.ts",
+        "specifier": "@/infra/logger",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/infra/logger.ts",
+        "evidence": [
+          {
+            "file": "src/app.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { log } from '@/infra/logger';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "81770eba8e2cb1e2950d88c2",
+        "from": "src/app.ts",
+        "specifier": "@/controllers/checkout",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/controllers/checkout.ts",
+        "evidence": [
+          {
+            "file": "src/app.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { checkout } from '@/controllers/checkout';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "5e3d1a69cb6d25eac295e36a",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../services/cart",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/cart.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { readCart } from '../services/cart';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "f0bf8a40873775f584936938",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../services/payments",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/payments.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { charge } from '../services/payments';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "fc0944bf83b504fe64ba49cb",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../models/order",
+        "kind": "import",
+        "typeOnly": true,
+        "status": "internal",
+        "to": "src/models/order.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 3,
+            "column": 1,
+            "text": "import type { Order } from '../models/order';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "78dfbb80d141ff0b8bf212ce",
+        "from": "src/plugins.ts",
+        "specifier": null,
+        "kind": "dynamic-import",
+        "typeOnly": false,
+        "status": "dynamic",
+        "to": null,
+        "evidence": [
+          {
+            "file": "src/plugins.ts",
+            "line": 1,
+            "column": 45,
+            "text": "import(name)",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "504c3d2c7a065db2c89e8582",
+        "from": "src/routes/api.ts",
+        "specifier": "../controllers/checkout",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/controllers/checkout.ts",
+        "evidence": [
+          {
+            "file": "src/routes/api.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { checkout } from '../controllers/checkout';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "0939603d8662d7b90ad87892",
+        "from": "src/services/cart.ts",
+        "specifier": "./pricing",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/pricing.ts",
+        "evidence": [
+          {
+            "file": "src/services/cart.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { price } from './pricing';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "9475a69e38a3f29f2417372a",
+        "from": "src/services/cart.ts",
+        "specifier": "./inventory",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/inventory.ts",
+        "evidence": [
+          {
+            "file": "src/services/cart.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { inventory } from './inventory';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "37b37a5dcb647431968e9760",
+        "from": "src/services/payments.ts",
+        "specifier": "../infra/logger",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/infra/logger.ts",
+        "evidence": [
+          {
+            "file": "src/services/payments.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { log } from '../infra/logger';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "a97d7ea0de056f4b3a64c1e6",
+        "from": "src/ui/Checkout.tsx",
+        "specifier": "../models/order",
+        "kind": "import",
+        "typeOnly": true,
+        "status": "internal",
+        "to": "src/models/order.ts",
+        "evidence": [
+          {
+            "file": "src/ui/Checkout.tsx",
+            "line": 1,
+            "column": 1,
+            "text": "import type { Order } from '../models/order';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "e0af6cd1a7d93cb4593a5c00",
+        "from": "src/ui/Checkout.tsx",
+        "specifier": "react",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "external",
+        "to": null,
+        "evidence": [
+          {
+            "file": "src/ui/Checkout.tsx",
+            "line": 2,
+            "column": 1,
+            "text": "import React from 'react';",
+            "truncated": false
+          }
+        ]
+      }
+    ],
+    "diagnostics": [],
+    "coverage": {
+      "modules": 11,
+      "references": 12,
+      "internal": 10,
+      "external": 1,
+      "unresolved": 0,
+      "dynamic": 1,
+      "parseErrors": 0,
+      "skippedFiles": 0,
+      "omittedReferences": 0
+    }
+  },
+  "head": {
+    "sha": "16136c58aeb1a20d9a30e4be5bdb5a39375c1262",
+    "modules": [
+      {
+        "path": "src/app.ts",
+        "hash": "11d454bb56ae77191e243a2d44bc3527493f00dad4b49458815727cc3417cd40",
+        "bytes": 155
+      },
+      {
+        "path": "src/controllers/checkout.ts",
+        "hash": "a2061e78998f5647e492486a12a842d39e707b5a1645251fe4ad007804f38d9f",
+        "bytes": 200
+      },
+      {
+        "path": "src/infra/logger.ts",
+        "hash": "5931b029cfa41faead4d25525ac4f6b71d924d0a3aed4907924f96cd91294a4d",
+        "bytes": 63
+      },
+      {
+        "path": "src/models/order.ts",
+        "hash": "9644dfeba8710ad6aad2ccb6026e040915ba86f6a6696132667fc2ff8398fae3",
+        "bytes": 77
+      },
+      {
+        "path": "src/plugins.ts",
+        "hash": "435d4d5566077aa8465a39fd3394410a6075e65c725d456cb9511c0b625f525b",
+        "bytes": 58
+      },
+      {
+        "path": "src/routes/api.ts",
+        "hash": "a55001c454fab689df15b84d87ea473c7d65a7a1f91efa8b9d3482594cac2142",
+        "bytes": 98
+      },
+      {
+        "path": "src/services/cart.ts",
+        "hash": "0aa373f55af65fa7950e60ab70534ff4f928f85be3e3cb2e15a2fcc3c7146065",
+        "bytes": 218
+      },
+      {
+        "path": "src/services/discounts.ts",
+        "hash": "5aefd8064a0273cbafac80bbbfa35e4f0e6b994de1c926904ac8d6c8ef3657fd",
+        "bytes": 186
+      },
+      {
+        "path": "src/services/fulfillment.ts",
+        "hash": "3138a2e3660a3cd26a0b21876706c7e3dbb5a11c208f0d6e0edd06813538711b",
+        "bytes": 225
+      },
+      {
+        "path": "src/services/inventory.ts",
+        "hash": "707dc3b4022a33ab72642a01db37aeba4bf1251c4330ef6b0d1f5ef2ed382e4f",
+        "bytes": 49
+      },
+      {
+        "path": "src/services/pricing.ts",
+        "hash": "c254aa55e50bbc9ed65c5cc30a3b725356d6455d79c860dff04f32ff09b5999d",
+        "bytes": 52
+      },
+      {
+        "path": "src/ui/Checkout.tsx",
+        "hash": "1888699eadf2d1c27b03ba7b56260d609f790486f74f383693b97582eda85310",
+        "bytes": 153
+      }
+    ],
+    "edges": [
+      {
+        "id": "7abb84e846f62c7bd79ae37b",
+        "from": "src/app.ts",
+        "specifier": "@/infra/logger",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/infra/logger.ts",
+        "evidence": [
+          {
+            "file": "src/app.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { log } from '@/infra/logger';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "81770eba8e2cb1e2950d88c2",
+        "from": "src/app.ts",
+        "specifier": "@/controllers/checkout",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/controllers/checkout.ts",
+        "evidence": [
+          {
+            "file": "src/app.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { checkout } from '@/controllers/checkout';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "5e3d1a69cb6d25eac295e36a",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../services/cart",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/cart.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { readCart } from '../services/cart';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "613054c317ae3a9553c41afd",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../services/fulfillment",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/fulfillment.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { fulfill } from '../services/fulfillment';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "fc0944bf83b504fe64ba49cb",
+        "from": "src/controllers/checkout.ts",
+        "specifier": "../models/order",
+        "kind": "import",
+        "typeOnly": true,
+        "status": "internal",
+        "to": "src/models/order.ts",
+        "evidence": [
+          {
+            "file": "src/controllers/checkout.ts",
+            "line": 3,
+            "column": 1,
+            "text": "import type { Order } from '../models/order';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "78dfbb80d141ff0b8bf212ce",
+        "from": "src/plugins.ts",
+        "specifier": null,
+        "kind": "dynamic-import",
+        "typeOnly": false,
+        "status": "dynamic",
+        "to": null,
+        "evidence": [
+          {
+            "file": "src/plugins.ts",
+            "line": 1,
+            "column": 45,
+            "text": "import(name)",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "504c3d2c7a065db2c89e8582",
+        "from": "src/routes/api.ts",
+        "specifier": "../controllers/checkout",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/controllers/checkout.ts",
+        "evidence": [
+          {
+            "file": "src/routes/api.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { checkout } from '../controllers/checkout';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "0939603d8662d7b90ad87892",
+        "from": "src/services/cart.ts",
+        "specifier": "./pricing",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/pricing.ts",
+        "evidence": [
+          {
+            "file": "src/services/cart.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { price } from './pricing';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "9475a69e38a3f29f2417372a",
+        "from": "src/services/cart.ts",
+        "specifier": "./inventory",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/inventory.ts",
+        "evidence": [
+          {
+            "file": "src/services/cart.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import { inventory } from './inventory';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "c145e566ec6d7b4401628996",
+        "from": "src/services/cart.ts",
+        "specifier": "./discounts",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/discounts.ts",
+        "evidence": [
+          {
+            "file": "src/services/cart.ts",
+            "line": 3,
+            "column": 1,
+            "text": "import { applyCoupon } from './discounts';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "1aa4d20344cd71113325a237",
+        "from": "src/services/discounts.ts",
+        "specifier": "./cart",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/services/cart.ts",
+        "evidence": [
+          {
+            "file": "src/services/discounts.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { readCart } from './cart';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "159e035add500819ca4eb3a3",
+        "from": "src/services/fulfillment.ts",
+        "specifier": "../infra/logger",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "internal",
+        "to": "src/infra/logger.ts",
+        "evidence": [
+          {
+            "file": "src/services/fulfillment.ts",
+            "line": 1,
+            "column": 1,
+            "text": "import { log } from '../infra/logger';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "9e7ad132a00f0dfc005c0efc",
+        "from": "src/services/fulfillment.ts",
+        "specifier": "../models/order",
+        "kind": "import",
+        "typeOnly": true,
+        "status": "internal",
+        "to": "src/models/order.ts",
+        "evidence": [
+          {
+            "file": "src/services/fulfillment.ts",
+            "line": 2,
+            "column": 1,
+            "text": "import type { Order } from '../models/order';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "a97d7ea0de056f4b3a64c1e6",
+        "from": "src/ui/Checkout.tsx",
+        "specifier": "../models/order",
+        "kind": "import",
+        "typeOnly": true,
+        "status": "internal",
+        "to": "src/models/order.ts",
+        "evidence": [
+          {
+            "file": "src/ui/Checkout.tsx",
+            "line": 1,
+            "column": 1,
+            "text": "import type { Order } from '../models/order';",
+            "truncated": false
+          }
+        ]
+      },
+      {
+        "id": "e0af6cd1a7d93cb4593a5c00",
+        "from": "src/ui/Checkout.tsx",
+        "specifier": "react",
+        "kind": "import",
+        "typeOnly": false,
+        "status": "external",
+        "to": null,
+        "evidence": [
+          {
+            "file": "src/ui/Checkout.tsx",
+            "line": 2,
+            "column": 1,
+            "text": "import React from 'react';",
+            "truncated": false
+          }
+        ]
+      }
+    ],
+    "diagnostics": [],
+    "coverage": {
+      "modules": 12,
+      "references": 15,
+      "internal": 13,
+      "external": 1,
+      "unresolved": 0,
+      "dynamic": 1,
+      "parseErrors": 0,
+      "skippedFiles": 0,
+      "omittedReferences": 0
+    }
+  },
+  "changes": [
+    {
+      "path": "src/controllers/checkout.ts",
+      "kind": "modified"
+    },
+    {
+      "path": "src/models/order.ts",
+      "kind": "modified"
+    },
+    {
+      "path": "src/services/cart.ts",
+      "kind": "modified"
+    },
+    {
+      "path": "src/services/discounts.ts",
+      "kind": "added"
+    },
+    {
+      "path": "src/services/fulfillment.ts",
+      "kind": "added"
+    },
+    {
+      "path": "src/services/payments.ts",
+      "kind": "removed"
+    }
+  ],
+  "addedEdges": [
+    {
+      "id": "613054c317ae3a9553c41afd",
+      "from": "src/controllers/checkout.ts",
+      "specifier": "../services/fulfillment",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/services/fulfillment.ts",
+      "evidence": [
+        {
+          "file": "src/controllers/checkout.ts",
+          "line": 2,
+          "column": 1,
+          "text": "import { fulfill } from '../services/fulfillment';",
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "c145e566ec6d7b4401628996",
+      "from": "src/services/cart.ts",
+      "specifier": "./discounts",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/services/discounts.ts",
+      "evidence": [
+        {
+          "file": "src/services/cart.ts",
+          "line": 3,
+          "column": 1,
+          "text": "import { applyCoupon } from './discounts';",
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "1aa4d20344cd71113325a237",
+      "from": "src/services/discounts.ts",
+      "specifier": "./cart",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/services/cart.ts",
+      "evidence": [
+        {
+          "file": "src/services/discounts.ts",
+          "line": 1,
+          "column": 1,
+          "text": "import { readCart } from './cart';",
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "159e035add500819ca4eb3a3",
+      "from": "src/services/fulfillment.ts",
+      "specifier": "../infra/logger",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/infra/logger.ts",
+      "evidence": [
+        {
+          "file": "src/services/fulfillment.ts",
+          "line": 1,
+          "column": 1,
+          "text": "import { log } from '../infra/logger';",
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "9e7ad132a00f0dfc005c0efc",
+      "from": "src/services/fulfillment.ts",
+      "specifier": "../models/order",
+      "kind": "import",
+      "typeOnly": true,
+      "status": "internal",
+      "to": "src/models/order.ts",
+      "evidence": [
+        {
+          "file": "src/services/fulfillment.ts",
+          "line": 2,
+          "column": 1,
+          "text": "import type { Order } from '../models/order';",
+          "truncated": false
+        }
+      ]
+    }
+  ],
+  "removedEdges": [
+    {
+      "id": "f0bf8a40873775f584936938",
+      "from": "src/controllers/checkout.ts",
+      "specifier": "../services/payments",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/services/payments.ts",
+      "evidence": [
+        {
+          "file": "src/controllers/checkout.ts",
+          "line": 2,
+          "column": 1,
+          "text": "import { charge } from '../services/payments';",
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "id": "37b37a5dcb647431968e9760",
+      "from": "src/services/payments.ts",
+      "specifier": "../infra/logger",
+      "kind": "import",
+      "typeOnly": false,
+      "status": "internal",
+      "to": "src/infra/logger.ts",
+      "evidence": [
+        {
+          "file": "src/services/payments.ts",
+          "line": 1,
+          "column": 1,
+          "text": "import { log } from '../infra/logger';",
+          "truncated": false
+        }
+      ]
+    }
+  ],
+  "newCycles": [
+    [
+      "src/services/cart.ts",
+      "src/services/discounts.ts"
+    ]
+  ]
+}
