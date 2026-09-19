@@ -16,5 +16,5 @@
     "prepack": "tsc -p tsconfig.json"
   },
   "dependencies": { "typescript": "5.9.3" },
-  "devDependencies": { "@types/node": "22.18.6" }
+  "devDependencies": { "@types/node": "26.6.1" }
 }
