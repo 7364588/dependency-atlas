@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Keep automated dependency upgrades within the supported Node type and
+  TypeScript compiler API baselines; document the major-upgrade review requirements.
+
 ## 0.1.0
 
 - Compare committed JS/TS module references using Git object reads and the
